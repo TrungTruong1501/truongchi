@@ -1,0 +1,306 @@
+.grid{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("https://img1.kienthucvui.vn/uploads/2019/10/10/anh-hoat-hinh-tinh-yeu_105705422.jpg") ;
+    background-size: 100%;
+    background-repeat:no-repeat ;
+    height: 100vh;
+}
+.img__create{
+    margin-top: 150px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+}
+.img__heart{
+    width: 100px;
+    height: auto;
+    outline: none;
+    
+}
+.img__icon1{
+    color: red;
+   position: absolute;
+   margin-bottom: 20px;
+   bottom: 0;
+   margin-right: 20px;
+   animation-name: shootHeart1;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+.img__icon2{
+    color: red;
+   position: absolute;
+   margin-bottom: 40px;
+   bottom: 0;
+   margin-right: 30px;
+   animation-name: shootHeart2;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+@keyframes shootHeart2{
+    0% {font-size: 1rem;left: 40px;}
+    25% {font-size: 2rem;left: 80px;}
+    50% {font-size: 3rem;left: 120px;}
+    100% {font-size: 4rem;left: 300px;}
+}
+@keyframes shootHeart1{
+    0% {font-size: 1rem;left: 50px;}
+    25% {font-size: 2rem;left: 100px;}
+    50% {font-size: 3rem;left: 150px;}
+    100% {font-size: 4rem;left: 300px;}
+}
+.truong__speak{
+    width: 150px;
+    height: 75px;
+}
+
+.img__idea{
+    font-size: 2.5rem;
+    color: white;
+}
+.truong__speak{
+    margin-top: 450px;
+    margin-right: 340px;
+    border: solid #999 1px;
+    background-color: white;
+    border-radius: 10px;
+    position:relative;
+}
+.truong__speak::before{
+    content: " ";
+    display: block;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-left: 30px;
+    border-right: 30px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    bottom: 1px;
+    left: -55px;
+    position: absolute;
+}   
+.truong__sorry{
+    color: #999;
+    margin: 0;
+    padding: 0;
+}
+.truong__sorry-icon{
+    color: #e9e615;
+    
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.container__gift1{
+    width: 200px;
+    height: 200px;
+    margin-right: 100px;
+    margin-bottom: 100px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.gift1__icon{
+    font-size: 200px;
+    color: red;
+    animation-name: gift1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  
+}
+
+.gift1__start{
+    font-size: 40px;
+    animation-name:start1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes start1{
+   0%{
+   
+     color: red;
+   }
+   25%{
+    
+     color: green;
+   }
+   50%{
+    
+     color: yellow;
+   }
+   100%{
+   
+     color: rgb(3, 19, 56);
+   }
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation:ani1 8s linear infinite;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+   
+}
+.container{
+    cursor: pointer;
+}
+.container__gift1:focus ~ .Truong{
+    display:block;
+}
+.box div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.box div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+    overflow: hidden;
+}
+.container :hover span{
+    transform:  rotateY(calc(90deg * var(--i))) translateZ(130px);
+}
+@keyframes ani1{
+    0%{
+        transform:rotateX(-30deg) rotateY(0);
+    }
+    100%{
+        transform:rotateX(-30deg) rotateY(360deg);
+    }
+}
+.box div span::before{
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 170%;
+    height: 170%;
+    background-image: linear-gradient(90deg, #00ccff,
+    #f008f0,#ecf008,#46f008);
+    animation:ani2 5s linear infinite;
+    z-index: -1;
+}
+@keyframes ani2{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.box div span img{
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    padding: 6px;
+}
+.box div.top{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    height: 125%;
+    width: 100%;
+    background-image: url('img/chi5.jpg');
+    background-position: center top;
+    background-size: cover;
+    transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg); 
+}
+.box div.bottom{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center top;
+    background-size: cover;
+    transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg); 
+    filter: blur(2px);
+    box-shadow: 0 0 120px #fff;
+}
+.Truong{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: -420px;
+    right: 50px; 
+}
+.truong__writting {
+    width: 350px;
+    height: 350px;
+    background-color: #fb7cb3;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.writting__heading{
+    display: block;
+    animation-name: color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes color{
+    0%{ color: red;}
+    25%{color: rgb(228, 243, 228)};
+    50%{
+        color: yellow;
+    }
+    100%{
+        color: blue;
+    }
+}
+.writting__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 200px;
+    box-sizing: border-box;
+    
+    }
+.writting__container-display{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 230px;
+}
+.writting__container-happy{
+    color: white;
+    display: block;
+    width: 240px;
+
+}
+.writting__container-icon{
+    width: 100px;
+    margin-left: 80px;
+}
+
+
+
